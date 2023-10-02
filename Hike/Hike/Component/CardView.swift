@@ -8,6 +8,23 @@
 import SwiftUI
 
 struct CardView: View {
+    // MARK: - PROPERTIES
+    
+    @State private var imageNumber: Int = 1
+    @State private var randomNumber: Int = 1
+    
+    //MARK: - FUNCTIONS
+    func randomImage() {
+        var currentNumber = imageNumber
+        while currentNumber == randomNumber {
+            randomNumber = Int.random(in: 1...5)
+        }
+        
+        
+        imageNumber = randomNumber
+    }
+    
+    
     var body: some View {
         //MARK: - CARD
         ZStack {
@@ -32,9 +49,11 @@ struct CardView: View {
                         )
                         
                         Spacer()
+                            .frame(width: 40)
                         Button {
                             //ACTION: Show a Sheet
                             print("The button was pressed.")
+                             
                         }  label: {
                             CustomButtonView()
                             }
@@ -48,31 +67,59 @@ struct CardView: View {
                         .foregroundColor(.customGrayMedium)
                 }
                 .padding(.horizontal, 30)
+                Spacer()
+                    .frame(height: 40)
+                
+                
+                
                 
                 // MARK: - MAIN CONTENT
                 
                 ZStack {
-                    Circle()
-                        .fill(
-                        LinearGradient(
-                            colors: [
-                                Color("ColorIndigoMedium"),
-                                Color ("ColorSalmonLight")],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                                )
-                            )
-                        .frame(width:256, height: 256)
-                    Image("image-1")
+                    CustomCircleView()
+                    
+                    Image("image-\(imageNumber)")
                         .resizable()
-                    .scaledToFit()
+                        .scaledToFit()
+                        .frame(width: 256, height: 256)
+                        .animation(.easeOut(duration: 0.5),
+                                   value : imageNumber
+                            )
+                        
+                        
                 }
+                Spacer().frame(height: 30)
                 
                 // MARK: - FOOTER
-                //: VSTACK
+                
+                Button {
+                    // ACTION: Generate a random number
+                    print("The number was pressed.")
+                    randomImage()
+                } label : {
+                    Text("Explore More")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [
+                                .customGreenLight,
+                                .customGreenMedium],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .shadow(color: .black.opacity(0.25),
+                                radius: 0.25, x: 1, y: 2)
+                }
+                .buttonStyle(GradientButton())
+                
+                
+                
+                //: ZSTACK
             }
         } //: CARD
-        .frame(width: 320, height: 570)
+        .frame(width: 350, height: 600)
     }
 }
 
