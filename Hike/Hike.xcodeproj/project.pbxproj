@@ -19,6 +19,8 @@
 		9D1339C32AC88F98008211BC /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1339C22AC88F98008211BC /* CustomCircleView.swift */; };
 		9D1339C52ACAE61D008211BC /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1339C42ACAE61D008211BC /* MotionAnimationView.swift */; };
 		9D1339C82ACB413D008211BC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1339C72ACB413D008211BC /* SettingsView.swift */; };
+		9D1339CA2ACC27A6008211BC /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1339C92ACC27A6008211BC /* SwiftUIView.swift */; };
+		9D1339CC2ACC8264008211BC /* CustomListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1339CB2ACC8264008211BC /* CustomListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		9D1339C22AC88F98008211BC /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		9D1339C42ACAE61D008211BC /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		9D1339C72ACB413D008211BC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9D1339C92ACC27A6008211BC /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		9D1339CB2ACC8264008211BC /* CustomListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				9D1339BE2AC7455C008211BC /* CustomButtonView.swift */,
 				9D1339C22AC88F98008211BC /* CustomCircleView.swift */,
 				9D1339C42ACAE61D008211BC /* MotionAnimationView.swift */,
+				9D1339CB2ACC8264008211BC /* CustomListRowView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				9D1339AA2AC72708008211BC /* ContentView.swift */,
 				9D1339C72ACB413D008211BC /* SettingsView.swift */,
+				9D1339C92ACC27A6008211BC /* SwiftUIView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -187,7 +193,9 @@
 			files = (
 				9D1339AB2AC72708008211BC /* ContentView.swift in Sources */,
 				9D1339C32AC88F98008211BC /* CustomCircleView.swift in Sources */,
+				9D1339CA2ACC27A6008211BC /* SwiftUIView.swift in Sources */,
 				9D1339B72AC73932008211BC /* CardView.swift in Sources */,
+				9D1339CC2ACC8264008211BC /* CustomListRowView.swift in Sources */,
 				9D1339A92AC72708008211BC /* HikeApp.swift in Sources */,
 				9D1339BF2AC7455C008211BC /* CustomButtonView.swift in Sources */,
 				9D1339C82ACB413D008211BC /* SettingsView.swift in Sources */,

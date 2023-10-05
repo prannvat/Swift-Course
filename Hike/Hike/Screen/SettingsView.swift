@@ -47,9 +47,9 @@ struct SettingsView: View {
                     Text("Where can you find \nperfect tracks?")
                         .font(.title2)
                         .fontWeight(.heavy)
-                        
                     
-                    Text("The hike which looks gorgeous in photos but is even better once you are actually there.   The hike that you hope to do again someday. \nFind the best day hikes in the app.")
+                    
+                    Text("The hike which looks gorgeous in photos but is even better once you are actually there. The hike that you hope to do again someday. \nFind the best day hikes in the app.")
                         .font(.footnote)
                         .italic()
                     
@@ -58,26 +58,83 @@ struct SettingsView: View {
                         .italic()
                         .foregroundColor(.customGreenMedium)
                     
-                    }
+                }
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
                 .frame(maxWidth: .infinity)
-                }
-                //: HEADER
-               
+            } //: HEADER
             .listRowSeparator(.hidden)
-            }
-                
             
-           
+            
+            
+            
             
             
             // MARK: - SECTION: ICONS
             
+            
+            
             // MARK: - SECTION: ABOUT
-            //: LIST
-        
-        
+            
+            Section (
+                header: Text("ABOUT THE APP"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright © All right reserved.")
+                    Spacer()
+                }
+                    .padding(.vertical, 8)
+            ) {
+                // 1. Basics Labeled Content
+                //                LabeledContent("Application", value: "Hike")
+                
+                //2. Advanced Labeled Content
+                CustomListRowView(
+                    rowLabel: "Application",
+                    rowIcon: "apps.iphone",
+                    rowContent: "HIKE",
+                    rowTintColor: .blue)
+                
+                
+                
+                CustomListRowView(
+                    rowLabel: "Compatibility",
+                    rowIcon: "info.circle",
+                    rowContent: "iOS, iPadOS",
+                    rowTintColor: .red)
+
+                
+                CustomListRowView(
+                    rowLabel: "Technology",
+                    rowIcon: "swift",
+                    rowContent: "Swift",
+                    rowTintColor: .orange)
+                
+                CustomListRowView(
+                    rowLabel: "Version",
+                    rowIcon: "v.circle",
+                    rowContent: "1.0",
+                    rowTintColor: .purple)
+                
+                CustomListRowView(
+                    rowLabel: "Developer",
+                    rowIcon: "face.smiling",
+                    rowContent: "Prannvat Singh",
+                    rowTintColor: .mint)
+                
+                CustomListRowView(
+                    rowLabel: "Designer",
+                    rowIcon: "paintpalette",
+                    rowContent: "Prannvat Singh",
+                    rowTintColor: .indigo)
+                
+                CustomListRowView(rowLabel: "Website",
+                                  rowIcon: "globe",
+                                  rowTintColor: .cyan,
+                                  rowLinkLabel: "Credo Academy",
+                                  rowLinkDestination: "https://credo.academy")
+            } //: SECTION
+        }//: LIST
     }
 }
 

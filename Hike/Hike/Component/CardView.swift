@@ -13,6 +13,7 @@ struct CardView: View {
     @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
     @State private var isShowingSheet: Bool = false
+    @State private var isShowingSheets: Bool = false
     
     //MARK: - FUNCTIONS
     func randomImage() {
@@ -102,6 +103,7 @@ struct CardView: View {
                     // ACTION: Generate a random number
                     print("The number was pressed.")
                     randomImage()
+                    isShowingSheets.toggle()
                 } label : {
                     Text("Explore More")
                         .font(.title2)
@@ -117,6 +119,11 @@ struct CardView: View {
                         )
                         .shadow(color: .black.opacity(0.25),
                                 radius: 0.25, x: 1, y: 2)
+                        .sheet(isPresented: $isShowingSheets) {
+                                CustomBackgroundView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.fraction(0.2), .large])
+                        }
                 }
                 .buttonStyle(GradientButton())
                 
